@@ -1,4 +1,6 @@
 <?php
+use shoudusse\paginateur\Tableau;
+
 require_once 'tableau.class.php';
 $sql1 = 'SELECT COUNT(*) AS nombreTotalLignes FROM livredor';
 $sql2 ='SELECT id, pseudo, message FROM livredor ';
@@ -16,7 +18,7 @@ $resultat = $montableau->getRetour(); // Tableau résultat correspondant à la p
 $suiv = $montableau->getSuivante(); // Url de la page suivante
 $prec = $montableau->getPrecedente(); // Url de la page précédente
 $menu = $montableau->getMenu();
-var_dump($resultat, $suiv, $prec, $menu); 
+var_dump($resultat, $suiv, $prec, $menu);  
 echo '<br>';
 var_dump($_SERVER);
 

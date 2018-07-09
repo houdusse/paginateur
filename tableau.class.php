@@ -1,4 +1,5 @@
 <?php
+namespace shoudusse\paginateur;
 
 class Tableau {
 
@@ -89,7 +90,7 @@ class Tableau {
  			$this->req = $db->prepare($this->sql2);
  			$this->req->execute();
  			$this->retour = array();
- 			while($this->donnees2 = $this->req->fetch(PDO::FETCH_ASSOC)) {
+ 			while($this->donnees2 = $this->req->fetch(\PDO::FETCH_ASSOC)) {
  				$this->retour[] = $this->donnees2; 
  			}
 		}
